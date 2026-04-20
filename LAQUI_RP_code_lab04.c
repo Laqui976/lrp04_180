@@ -16,13 +16,13 @@ typedef struct {
 int **create_matrix(int n) {
      //create nxn matrix
     int **x = (int **)malloc(n *sizeof(int *));
-    for (int i = 0; i < n; i++) {
-         x[i] = (int *)malloc(n * sizeof(int));
-    }
     if(x == NULL){
         printf("Memory allocation failed\n");
         exit(1);
     } 
+       for (int i = 0; i < n; i++) {
+         x[i] = (int *)malloc(n * sizeof(int));
+    }
     
     //assign random int element in matrix
     for (int i = 0; i<n; i++){
